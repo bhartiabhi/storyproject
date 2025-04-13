@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STORY MANIA </title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <header class="hero">
+        <img src="storymania.logo.png" alt="Profile Image" class="profile-img">
+        <h1>Welcome to Story Mania</h1>
+        <p>Read amazing short stories</p>
+        <button id="darkModeToggle"> 🌙 Toggle Dark Mode</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+    <section class="stories">
+        <div class="story">
+            <h2>Love or Confusion</h2>
+            <p>A tale of covid pandamic</p>
+            <button class="read-more" onclick="readStory('Love or Confusion')">Read More</button>
+        </div>
+
+        <div class="story">
+            <h2>An Unwritten love</h2>
+            <p>An Adventure Story Raghav… </p>
+            <button class="read-more" onclick="readStory('An Unwritten love')"> Read More</button>
+        </div>
+
+        <div class="story">
+            <h2>The Many More</h2>
+            <p>Shayri.... </p>
+            <button class="read-more" onclick="readStory('The Hidden Treasure')">Read More</button>
+        </div>
+
+        <div class="story">
+            <h2>Add Your Short Story</h2>
+            <p>And Become People Favourite Author </p>
+            <button class="read-more" onclick="openModal()">Submit</button>
+        </div>
+    </section>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <section id="about">
+        <h2>About Story Blog</h2>
+        <p>Story Blog is dedicated to bringing engaging and imaginative stories across various genres. Whether you love
+            mystery, adventure, or heartfelt tales, we have something for everyone.</p>
+        <p>Join us on this literary journey and explore the world of storytelling!</p>
+    </section>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="storyModal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;">
+        <div
+            style="background:white; padding:20px; max-width:500px; margin:100px auto; border-radius:10px; position:relative;">
+            <span onclick="closeModal()"
+                style="position:absolute; top:10px; right:20px; cursor:pointer; font-size:20px;">&times;</span>
+            <h2>Submit Your Story</h2>
+            <form id="storyForm">
+                <input type="text" id="name" placeholder="Your Name" required style="width:100%; margin-bottom:10px;" />
+                <input type="text" id="title" placeholder="Story Title" required
+                    style="width:100%; margin-bottom:10px;" />
+                <textarea id="content" placeholder="Your Story" rows="5" required
+                    style="width:100%; margin-bottom:10px;"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="formMessage" style="display:none; color: green;">Thank you for reaching out! We'll get back to you
+                soon.</p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Story Blog. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
